@@ -1,6 +1,3 @@
-@import url("reset.css");
-
-
 body {
 	background-image: url("../images/swirl_pattern.png");
 	background-color: rgba(244, 246, 252, 1);
@@ -30,38 +27,18 @@ a, p, footer, form {
 
 #logo {
 	float: left;
-	position: relative;
-	overflow: hidden;
 	background-color: rgba(230, 97, 107, 1);
 	padding: 10px 20px;
+	border-right: 2px rgba(90, 125, 124, 1) solid;
+	border-left: 2px rgba(90, 125, 124, 1) solid;
+}
+
+.script {
 	font-family: 'Kaushan Script', cursive;
 	font-size: 70px;
 	font-weight: bold;
 	letter-spacing: 5px;
 	color: rgba(230, 97, 107, .7);
-	border-right: 2px rgba(90, 125, 124, 1) solid;
-	border-left: 2px rgba(90, 125, 124, 1) solid;
-}
-
-.cover {
-  position: absolute;
-  top: 0;
-  left: -5px;
-  background-color: rgba(230, 97, 107, 1);
-  width: 100%;
-  height: 100%;
-  animation: fade 10s linear;
-  opacity: 0.0;
-  overflow: hidden;
-}
-
-@keyframes fade {
-  0% {
-    opacity: 1.0;
-  }
-  100% {
-    opacity: 0.0;
-  }
 }
 
 nav {
@@ -85,7 +62,7 @@ nav li:last-child {
 
 nav a {
 	width: 80px;
-	padding: 0 15px;
+	padding: 0 10px;
 	color: rgba(35, 44, 51, 1);
 	transition: .8s ease;
 }
@@ -300,9 +277,103 @@ footer {
 	text-shadow: -1px 1px 0 rgba(0,0,0,0.4);
 }
 
-/* pallette
-main, light carmine pink : rgba(230, 97, 107, 1);
-alt, dark liver: rgba(83, 62, 45, 1);
-borders, wintergreen dream: rgba(90, 125, 124, 1);
-bg, white smoke: rgba(244, 246, 252, 1);
-text/dark, charleston green: rgba(35, 44, 51, 1);*/
+@media screen and (max-width: 980px) {
+	.container {
+		width: 750px;
+	}
+
+	section {
+		width: 450px;
+	}
+
+	#logo {
+		padding: 20px;
+	}
+
+	.script {
+		font-size: 50px;
+	}
+
+	nav {
+		font-size: 14px;
+	}
+
+	figure {
+		float: none;
+	}
+
+	figure img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 620px;
+	}
+	
+	section {
+		float: none;
+		width: 100%;
+	}
+
+	aside {
+		float: none;
+		width: 100%;
+	}
+
+	#logo {
+		padding: 25px 20px;
+	}
+
+	.script {
+		font-size: 40px;
+	}
+
+	section {
+		overflow: hidden;
+	}
+
+	figure {
+		float: left;
+	}
+
+	figure img {
+		width: 240px;
+		height: auto;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+	.container {
+		width: 600px;
+	}
+
+	header>.container {
+		width: 100%;
+	}
+
+	#logo {
+		float: none;
+		text-align: center;
+		border: none;
+	}
+
+	nav {
+		float: none;
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	figure {
+		float: none;
+	}
+
+	figure img {
+		width: 100%;
+		height: auto;
+	}
+
+}
