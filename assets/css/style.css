@@ -159,7 +159,7 @@ figure {
 figure img {
 	width: 255px;
 	height: 200px;
-	transition: 1s ease;
+	transition: opacity 1s ease;
 }
 
 figure img:hover {
@@ -359,7 +359,13 @@ footer {
 		float: none;
 		text-align: center;
 		border: none;
+		padding: 20px;
 	}
+
+	.script {
+		font-size: 50px;
+	}
+
 
 	nav {
 		float: none;
